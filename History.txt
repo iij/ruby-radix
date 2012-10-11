@@ -2,3 +2,7 @@
 
 * 1 major enhancement:
   * Initial release
+
+=== 0.0.2 2012-10-11
+
+* fix build error
