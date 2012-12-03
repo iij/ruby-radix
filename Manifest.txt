@@ -1,12 +1,9 @@
 History.txt
 Manifest.txt
-PostInstall.txt
 README.rdoc
 Rakefile
+ruby-radix.gemspec
 lib/ruby-radix.rb
-script/console
-script/destroy
-script/generate
 test/test_helper.rb
 test/test_ruby-radix.rb
 ext/radix.c

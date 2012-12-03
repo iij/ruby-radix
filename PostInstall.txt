@@ -1,3 +1,0 @@
-
-For more information on ruby-radix, see https://github.com/iij/ruby-radix
-
