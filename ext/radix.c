@@ -242,6 +242,9 @@ rb_radix_add(int argc, VALUE *argv, VALUE self)
 		plen = -1;
 	}
 
+	if (TYPE(v_addr) != T_STRING)
+		v_addr = rb_obj_as_string(v_addr);
+
 	prefix = args_to_prefix(RSTRING_PTR(v_addr), plen);
 	if (prefix == NULL)
 		return Qnil;
@@ -271,6 +274,9 @@ rb_radix_add0(int argc, VALUE *argv, VALUE self)
 		plen = -1;
 	}
 
+	if (TYPE(v_addr) != T_STRING)
+		v_addr = rb_obj_as_string(v_addr);
+
 	prefix = args_to_prefix(RSTRING_PTR(v_addr), plen);
 	if (prefix == NULL)
 		return Qnil;
@@ -298,6 +304,9 @@ static VALUE rb_radix_delete(int argc, VALUE *argv, VALUE self)
 		rb_scan_args(argc, argv, "1", &v_addr);
 		plen = -1;
 	}
+
+	if (TYPE(v_addr) != T_STRING)
+		v_addr = rb_obj_as_string(v_addr);
 
 	prefix = args_to_prefix(RSTRING_PTR(v_addr), plen);
 	if (prefix == NULL)
@@ -349,6 +358,9 @@ rb_radix_search_best(int argc, VALUE *argv, VALUE self)
 		plen = -1;
 	}
 
+	if (TYPE(v_addr) != T_STRING)
+		v_addr = rb_obj_as_string(v_addr);
+
 	prefix = args_to_prefix(RSTRING_PTR(v_addr), plen);
 	if (prefix == NULL)
 		return Qnil;
@@ -397,6 +409,9 @@ rb_radix_search_exact(int argc, VALUE *argv, VALUE self)
 		rb_scan_args(argc, argv, "1", &v_addr);
 		plen = -1;
 	}
+
+	if (TYPE(v_addr) != T_STRING)
+		v_addr = rb_obj_as_string(v_addr);
 
 	prefix = args_to_prefix(RSTRING_PTR(v_addr), plen);
 	if (prefix == NULL)
